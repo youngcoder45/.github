@@ -1,0 +1,71 @@
+name: Question
+description: Ask a question about setup, usage, configuration, or project behavior
+title: "[Question]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question? We're happy to help.
+
+        Before submitting, please check:
+        - Existing issues
+        - Project documentation
+        - README and setup instructions
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: How do I configure this project for production deployment?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Tell us what you're trying to accomplish and what you've already tried.
+      placeholder: |
+        I am trying to...
+
+        I have already:
+        - Read the README
+        - Checked existing issues
+        - Tried the following steps...
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Project Version (Optional)
+      description: Which version, release, or commit are you using?
+      placeholder: v1.2.0
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment (Optional)
+      description: Operating system, browser, runtime, etc.
+      placeholder: Windows 11, Chrome 136
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots (Optional)
+      description: Paste any relevant logs, error messages, or screenshots.
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues before opening this question.
+          required: true
+        - label: I reviewed the project documentation and README.
+          required: true
