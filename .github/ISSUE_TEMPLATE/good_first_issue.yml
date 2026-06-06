@@ -8,15 +8,6 @@ body:
       value: |
         Use this template to suggest a beginner-friendly contribution.
 
-  - type: input
-    id: task_title
-    attributes:
-      label: Task Title
-      description: A short title for the task.
-      placeholder: Add dark mode support
-    validations:
-      required: true
-
   - type: textarea
     id: task_description
     attributes:
