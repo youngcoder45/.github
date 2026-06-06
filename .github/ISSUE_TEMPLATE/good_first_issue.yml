@@ -1,92 +1,76 @@
 name: Good First Issue
-description: Suggest a beginner-friendly task for new contributors
+description: Suggest a beginner-friendly contribution
 title: "[Good First Issue]: "
-labels:
-
-* good first issue
 
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to suggest a beginner-friendly contribution.
 
-* type: markdown
-  attributes:
-  value: |
-  Use this template to propose a beginner-friendly task that would be suitable for first-time contributors.
+  - type: input
+    id: task_title
+    attributes:
+      label: Task Title
+      description: A short title for the task.
+      placeholder: Add dark mode support
+    validations:
+      required: true
 
-* type: input
-  id: title
-  attributes:
-  label: Task Title
-  description: A short, descriptive title for the task.
-  placeholder: Add dark mode support
-  validations:
-  required: true
+  - type: textarea
+    id: task_description
+    attributes:
+      label: Task Description
+      description: Describe the task in detail.
+    validations:
+      required: true
 
-* type: textarea
-  id: description
-  attributes:
-  label: Task Description
-  description: Clearly explain what needs to be done.
-  placeholder: Describe the task and the expected outcome.
-  validations:
-  required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Documentation
+        - HTML
+        - CSS
+        - JavaScript
+        - Accessibility
+        - UI/UX
+        - Testing
+        - Refactoring
+        - Other
+    validations:
+      required: true
 
-* type: textarea
-  id: implementation
-  attributes:
-  label: Suggested Implementation
-  description: Optional guidance for contributors.
-  placeholder: Files to modify, libraries to use, or relevant notes.
-  validations:
-  required: false
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - Beginner
+        - Beginner+
+        - Intermediate
+    validations:
+      required: true
 
-* type: dropdown
-  id: difficulty
-  attributes:
-  label: Difficulty
-  options:
-  - Beginner
-  - Beginner+
-  - Intermediate
-  validations:
-  required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: What must be completed for this issue to be considered done?
+      placeholder: |
+        - Feature works correctly
+        - No console errors
+        - Documentation updated if necessary
+    validations:
+      required: true
 
-* type: dropdown
-  id: category
-  attributes:
-  label: Category
-  options:
-  - Documentation
-  - HTML
-  - CSS
-  - JavaScript
-  - Accessibility
-  - UI/UX
-  - Testing
-  - Refactoring
-  - Other
-  validations:
-  required: true
-
-* type: textarea
-  id: acceptance
-  attributes:
-  label: Acceptance Criteria
-  description: What conditions must be met for this issue to be considered complete?
-  placeholder: |
-  - Feature works on desktop and mobile
-  - No console errors
-  - Documentation updated
-  validations:
-  required: true
-
-* type: checkboxes
-  id: checklist
-  attributes:
-  label: Maintainer Checklist
-  options:
-  - label: This task is suitable for first-time contributors.
-  required: true
-  - label: The scope of work is small and well-defined.
-  required: true
-  - label: Necessary documentation or guidance is available.
-  required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Maintainer Checklist
+      options:
+        - label: This task is suitable for first-time contributors.
+          required: true
+        - label: The scope is small and well-defined.
+          required: true
